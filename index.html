@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vida Suave Travels</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('image1.jpg') no-repeat center center/cover;
+      z-index: -1;
+    }
+    .glass-nav, .glass-section {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      margin: 1rem;
+      border-radius: 15px;
+      padding: 1rem 2rem;
+    }
+    header.glass-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 100px;
+    }
+    .hero-buttons {
+      margin-top: 20px;
+    }
+  /* Smooth fade-in and slide-up animation */
+.glass-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+}
+
+.glass-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: hover glow effect */
+.glass-section:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+    .glass-btn {
+      padding: 0.6rem 1.2rem;
+      margin: 0 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid white;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .glass-btn:hover {
+      background: white;
+      color: black;
+    }
+    .destination, .stay {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      margin: 1rem;
+      padding: 1rem;
+      width: calc(33% - 2rem);
+      box-sizing: border-box;
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .booking-section form {
+      display: flex;
+      flex-direction: column;
+    }
+    .booking-section input, .booking-section button {
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 10px;
+    }
+  .logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Background Image -->
+  <div class="background"></div>
+
+  <!-- Navigation -->
+  <header class="glass-nav">
+    <div class="logo">
+  <img src="logo.png" alt="Vida Suave Logo" class="logo-img" />
+</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#stays">Stays</a>
+      <a href="#booking" class="btn-book">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Sections -->
+  <main>
+
+    <!-- Hero -->
+    <section id="home" class="glass-section hero">
+      <h1>Welcome to Vida Suave Travels</h1>
+      <p>Your gateway to seamless travel experiences in South Africa.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="glass-btn">Explore</a>
+        <a href="#booking" class="glass-btn">Book Now</a>
+      </div>
+    </section>
+<!-- Our Services -->
+<section id="services" class="glass-section">
+  <h2>Our Services</h2>
+  <p>Explore world-class services tailored for leisure and business travelers alike.</p>
+  <div class="destination">
+    <div class="card">
+      <img src="Car.png" alt="Car Hire">
+      <h3>Car Hire</h3>
+      <p>Self-drive rentals available for both short and long stays.</p>
+    </div>
+    <div class="card">
+      <img src="Shuttle.png" alt="Shuttle Services">
+      <h3>Shuttle Services</h3>
+      <p>Safe, reliable transport to and from airports and local attractions.</p>
+    </div>
+    <div class="card">
+      <img src="Suv.png" alt="Leisure & Business Travel">
+      <h3>Leisure & Business Travel</h3>
+      <p>Tailored experiences for families, couples, and corporate teams.</p>
+    </div>
+    <div class="card">
+      <img src="flight.png" alt="Flight Bookings">
+      <h3>Flight Bookings</h3>
+      <p>Domestic and international flights at competitive rates.</p>
+    </div>
+    <div class="card">
+      <img src="con.png" alt="Conference Room Booking">
+      <h3>Conference Rooms</h3>
+      <p>Book accommodation with boardrooms for meetings & events.</p>
+    </div>
+    <div class="card">
+      <img src="acc.png" alt="Accommodation">
+      <h3>Accommodation</h3>
+      <p>Hotels, lodges, and guesthouses across the Eastern Cape and beyond.</p>
+    </div>
+  </div>
+</section>
+
+    <!-- Destinations -->
+    <section id="destinations" class="glass-section">
+      <h2>Top Destinations</h2>
+      <p>Safari lodges, coastal retreats, and cultural landmarks await you.</p>
+      <div class="destination">
+        <div class="card">
+          <img src="TsNP.jpg" alt="Port St. Johns">
+          <h3>Port St. Johns</h3>
+          <p>A beautiful Wild Coast town with beaches, cliffs, and hiking trails.</p>
+        </div>
+        <div class="card">
+          <img src="El.jpg" alt="Addo National Park">
+          <h3>Addo Elephant Park</h3>
+          <p>Home to the Big 5, perfect for wildlife photography and game drives.</p>
+        </div>
+        <div class="card">
+          <img src="CB.jpg" alt="Hole in the Wall">
+          <h3>Hole in the Wall</h3>
+          <p>A natural sea arch near Coffee Bay, steeped in local Xhosa legend.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stays -->
+    <section id="stays" class="glass-section">
+      <h2>Luxury Accommodations</h2>
+      <p>Curated resorts, hotels, and private getaways tailored for you.</p>
+      <div class="stay">
+        <div class="card">
+          <img src="oc.jpg" alt="Oceana Beach and Wildlife Reserve">
+          <h3>Oceana Beach & Wildlife Reserve</h3>
+          <p>Port Alfred<br>Private suites with beach access and game viewing.</p>
+        </div>
+        <div class="card">
+          <img src="PR.jpg?k=8ee91dd8215140e75354a3b7993c77df4896b57b7ec7c3c7fae0f281e8b64cd7&o=" alt="Premier Hotel EL ICC">
+          <h3>Premier Hotel EL ICC</h3>
+          <p>East London<br>Modern rooms with ocean views next to ICC and beach.</p>
+        </div>
+        <div class="card">
+          <img src="SC.jpg?w=1200&h=-1&s=1" alt="Schotia Safaris">
+          <h3>Schotia Safaris Lodge</h3>
+          <p>Addo<br>Stay among the wildlife and explore with experienced guides.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="glass-section booking-section">
+      <h2>Book Your Trip</h2>
+      <form id="booking-form">
+        <input type="text" placeholder="Your Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="text" placeholder="Destination" required />
+        <input type="date" required />
+        <button type="submit">Submit Booking</button>
+      </form>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="glass-section">
+      <h2>Contact Us</h2>
+      <p>Email: vidasuavetravels@gmail.com </p>
+      <p>Phone: +27 63 713 6392 | +27 67 194 0928 </p>
+    </section>
+
+  </main>
+
+  <script>
+    // Smooth scroll for "Book Now" buttons
+    document.querySelectorAll('.btn-book').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('#booking').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  const sections = document.querySelectorAll('.glass-section');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // Only animate once
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+  </script>
+
+</body>
+</html>
